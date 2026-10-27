@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Donation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h2>Add Temple Donation</h2>
+
+<form method="POST">
+    Donor Name:
+    <input type="text" name="Donor_Name" required>
+    <br><br>
+
+    Amount:
+    <input type="number" name="Amount" step="0.01" min="1" required>
+    <br><br>
+
+    Purpose:
+    <select name="Purpose" required>
+        <option value="General">General</option>
+        <option value="Annadanam">Annadanam (Food)</option>
+        <option value="Temple Renovation">Temple Renovation</option>
+        <option value="Festival">Festival</option>
+        <option value="Pooja">Pooja</option>
+    </select>
+    <br><br>
+
+    <input type="submit" value="Add Donation">
+</form>
+
+<br>
+<a href="/donation">View Donations</a>
+
+</body>
+</html>

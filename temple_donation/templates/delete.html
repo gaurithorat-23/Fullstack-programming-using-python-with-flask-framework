@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Donation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h3>Delete Donation</h3>
+
+<form action="/delete" method="POST">
+    Donation ID:
+    <input type="number" name="Donation_ID" min="1" required>
+    <br><br>
+
+    <input type="submit" value="Delete Donation">
+</form>
+
+<br>
+
+<a href="/donation">View Donations</a>
+
+</body>
+</html>
